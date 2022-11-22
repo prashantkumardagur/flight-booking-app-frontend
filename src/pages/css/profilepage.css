@@ -1,0 +1,14 @@
+.placeholder{
+  height: 100px;
+  background-color: var(--accent-light);
+}
+.profile form{
+  column-gap: 20px;
+  padding-top: 10px;
+}
+.pwd-change-btn{
+  width: fit-content;
+}
+.feedback{
+  align-self: flex-end;
+}

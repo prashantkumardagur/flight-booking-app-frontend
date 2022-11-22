@@ -1,0 +1,30 @@
+.dashboard{
+  grid-template-columns: 300px 1fr;
+}
+.sidenav{
+  min-height: calc(100vh - 80px);
+  border-right: 2px solid var(--shadow);
+  padding-top: 30px;
+}
+.sidenav a{
+  width: 90%;
+  display: flex;
+  padding: 10px;
+  padding-left: 30px;
+  margin-top: 5px;
+  border-radius: 0 20px 20px 0;
+  font-weight: 500;
+  font-size: 17px;
+}
+.sidenav a:hover{
+  background-color: var(--shadow);
+}
+.sidenav a.active{
+  background-color: var(--accent-light);
+}
+
+main{
+  max-height: calc(100vh - 80px);
+  overflow-y: scroll;
+  padding: 30px 5vw 60px 30px;
+}

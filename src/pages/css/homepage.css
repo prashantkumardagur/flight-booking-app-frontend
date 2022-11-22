@@ -1,0 +1,15 @@
+.hero-actions form{
+  text-align: left;
+  grid-template-columns: 2fr 2fr 160px;
+  gap: 20px;
+}
+.hero-actions .btn{
+  height: 60px;
+  align-self: flex-end;
+  border-radius: 5px;
+}
+.hero-actions input{
+  box-shadow: 0 10px 10px #00f1;
+  padding: 15px 20px;
+  height: 60px;
+}

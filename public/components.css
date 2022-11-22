@@ -1,0 +1,106 @@
+/* ===== Buttons =========================================================== */
+
+.btn{
+  border-radius: 5px; 
+  font-size: 16px; 
+  padding: 8px 15px;
+  display: inline-flex;
+  align-items: center;
+}
+.btn.primary{
+  background-color: var(--accent); 
+  color: white;
+}
+.btn.primary:hover{
+  background-color: var(--accent-dark)
+}
+.btn.black{
+  background-color: black; 
+  color: white;
+}
+.btn.large{
+  padding: 12px 20px;
+}
+
+.a-link{
+  font-weight: 500;
+  color: var(--accent);
+}
+
+
+/*===== Data Views ========================================================= */
+
+.data-chip{
+  display: inline-block;
+  padding: 4px 8px;
+  font-size: 15px;
+  background-color: var(--accent-light);
+  color: var(--accent);
+  border-radius: 5px;
+}
+.data-chip.success{
+  background-color: var(--green-light);
+  color: var(--green);
+}
+.data-chip.error{
+  background-color: var(--red-light);
+  color: var(--red);
+}
+
+
+/*===== Loaders ============================================================*/
+
+.page-loader{
+  width: 100%;
+  padding: 40px 0;
+  text-align: center;
+  font-size: 20px;
+}
+
+.loadingIcon{ 
+  height: 1em; 
+  width: 1em; 
+  overflow: hidden; 
+  display: inline-block;
+}
+
+.loadingIcon svg {
+  display: block;
+  margin: 0 auto;
+  animation: loading-spin 1s linear infinite;
+  will-change: transform;
+}
+
+@keyframes loading-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.loadingIcon circle {
+  stroke-dasharray: 210;
+  stroke-dashoffset: 210;
+  stroke-linecap: round;
+  animation: loading-spinner 1.7s cubic-bezier(0.445, 0.05, 0.55, 0.95) infinite;
+  transform: translateZ(0);
+  transform-origin: center;
+  will-change: stroke-dashoffset;
+}
+
+@keyframes loading-spinner {
+  0% {
+    stroke-dashoffset: 190;
+    transform: scaleY(1);
+  }
+  49.99% {
+    stroke-dashoffset: 0;
+    transform: scaleY(1);
+  }
+  50% {
+    stroke-dashoffset: 0;
+    transform: scaleY(-1) rotate(25deg);
+  }
+  100% {
+    stroke-dashoffset: 190;
+    transform: scaleY(-1) rotate(-32deg);
+  }
+}
