@@ -1,4 +1,5 @@
 import { useContext } from 'react';
+import { Link } from 'react-router-dom';
 
 import Icon from '../ui/Icon/Icon';
 
@@ -9,7 +10,7 @@ import AuthContext from "../../store/AuthContext";
 
 const FlightList = (props) => {
 
-  const { isAdmin } = useContext(AuthContext);
+  const { isAdmin, isLoggedIn } = useContext(AuthContext);
 
 
 
@@ -50,7 +51,13 @@ const FlightList = (props) => {
           <div className="flight-price"><Icon icon="currency_rupee" />{flight.price}</div>
           { isAdmin ?
             <button className="btn black" onClick={() => {props.onDelete(flight._id)}}><Icon icon="delete" /></button> :
-            <button className="btn primary">Book</button>
+            <div className='d-flex align-center justify-center flex-column'>
+              <p className='txt-light mb-1'>{flight.seats} seats left</p>
+              { isLoggedIn ?
+              <button className="btn primary">Book</button> :
+              <Link to="/auth/login" className="btn primary">Book</Link>
+              }
+            </div>
           } 
         </div>)}
     </div>

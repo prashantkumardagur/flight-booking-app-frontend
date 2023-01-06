@@ -16,6 +16,10 @@ const HeroActions = (props) => {
     <form className="d-grid" onSubmit={submitHandler}>
       <AirportPicker id="from" name="from" label="From" />
       <AirportPicker id="to" name="to" label="To" />
+      {/* <section>
+        <label htmlFOr="date">Date</label>
+        <input type="date" id="date" name="date" required />
+      </section> */}
       <button className="btn primary justify-center">Search</button>
     </form>
   </div>);

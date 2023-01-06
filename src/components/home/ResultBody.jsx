@@ -5,7 +5,7 @@ import FlightList from "../global/FlightList";
 
 const ResultBody = (props) => {
 
-  let list = props.list.sort((a,b) => a.price - b.price )
+  let list = props.list.sort((a,b) => a.price - b.price );
 
 
   return (
